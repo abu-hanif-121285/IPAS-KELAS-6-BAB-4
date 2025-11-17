@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi IPAS Kelas 6 - Bab 4</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Mengatur font default ke Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Kelas untuk menyembunyikan halaman */
+        .hidden {
+            display: none;
+        }
+        /* Styling untuk accordion materi */
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1rem;
+            background-color: #f3f4f6; /* gray-100 */
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.2s;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details > summary:hover {
+            background-color: #e5e7eb; /* gray-200 */
+        }
+        details[open] > summary {
+            background-color: #e5e7eb; /* gray-200 */
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        details > div {
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb; /* border-gray-200 */
+            border-top: none;
+            border-bottom-left-radius: 0.5rem; /* rounded-b-lg */
+            border-bottom-right-radius: 0.5rem;
+        }
+        details > div ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        details > div h4 {
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937; /* gray-800 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-3xl bg-white rounded-xl shadow-2xl overflow-hidden">
+        
+        <!-- 1. Halaman Menu Utama -->
+        <div id="menu-utama" class="page-container p-6 sm:p-10 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Aplikasi IPAS Kelas 6</h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-8">Bab 4: Indonesia dan Masyarakat Dunia</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showPage('materi-page')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 text-lg">
+                    📖 Baca Materi
+                </button>
+                <button onclick="showPage('kuis-login-page')" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 text-lg">
+                    📝 Mulai Kuis
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. Halaman Materi -->
+        <div id="materi-page" class="page-container hidden p-6 sm:p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Materi Bab 4</h2>
+                <button onclick="showPage('menu-utama')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg transition duration-200">
+                    &larr; Kembali
+                </button>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Topik A -->
+                <details>
+                    <summary>Topik A: Hubungan Antarnegara</summary>
+                    <div>
+                        <h4>Pengertian Perdagangan Antarnegara</h4>
+                        <p>Setiap negara perlu menjalin hubungan dengan negara lain untuk memenuhi kebutuhannya karena potensi sumber daya yang berbeda. Perdagangan antarnegara (perdagangan internasional) adalah kegiatan jual beli barang dan jasa antara satu negara dengan negara lain.</p>
+                        
+                        <h4>Manfaat Perdagangan Antarnegara</h4>
+                        <ul>
+                            <li>Memenuhi kebutuhan yang tidak dimiliki sendiri.</li>
+                            <li>Menambah penghasilan negara (devisa).</li>
+                            <li>Menjalin persahabatan antarnegara.</li>
+                            <li>Mendapat barang berkualitas atau lebih murah.</li>
+                            <li>Meningkatkan kemajuan teknologi dan lapangan kerja.</li>
+                        </ul>
+
+                        <h4>Tujuan Perdagangan Antarnegara</h4>
+                        <ul>
+                            <li>Memenuhi kebutuhan dalam negeri.</li>
+                            <li>Menjual kelebihan hasil produksi.</li>
+                            <li>Menjalin kerja sama dan hubungan baik.</li>
+                            <li>Mendapatkan barang yang tidak bisa diproduksi sendiri.</li>
+                            <li>Meningkatkan pertumbuhan ekonomi.</li>
+                        </ul>
+
+                        <h4>Ekspor, Impor, dan Produk Dalam Negeri</h4>
+                        <p><strong>Keuntungan Ekspor:</strong> Mendapat devisa, produk dalam negeri laku di pasar internasional, menumbuhkan industri lokal.</p>
+                        <p><strong>Kerugian Impor Berlebih:</strong> Devisa berkurang, produk luar mengalahkan produk dalam negeri, industri lokal melemah.</p>
+                        <p><strong>Dampak Beralih ke Barang Dalam Negeri:</strong> Mendukung ekonomi nasional, meningkatkan lapangan kerja, menumbuhkan rasa cinta tanah air, mengurangi ketergantungan impor.</p>
+
+                        <h4>Faktor-Faktor Globalisasi</h4>
+                        <ul>
+                            <li>Perkembangan sistem perekonomian dunia (pasar bebas).</li>
+                            <li>Kemajuan teknologi informasi dan komunikasi (internet).</li>
+                            <li>Kemajuan teknologi transportasi.</li>
+                            <li>Kerja sama internasional dan perusahaan multinasional.</li>
+                            <li>Migrasi (perpindahan penduduk) dan pertukaran budaya.</li>
+                        </ul>
+
+                        <h4>Globalisasi di Berbagai Bidang</h4>
+                        <p><strong>Ekonomi:</strong> Pertukaran barang/jasa berskala internasional, ekonomi saling terhubung.</p>
+                        <p><strong>Budaya:</strong> Dipengaruhi migrasi dan tren global (misal: K-fashion).</p>
+                        <p><strong>Politik:</strong> Hubungan diplomatik meningkat, kerja sama internasional lebih mudah.</p>
+                        <p><strong>IPTEK:</strong> Mempercepat penyebaran ilmu pengetahuan dan teknologi.</p>
+                    </div>
+                </details>
+
+                <!-- Topik B -->
+                <details>
+                    <summary>Topik B: Kerja Sama Indonesia dengan Negara di Dunia</summary>
+                    <div>
+                        <h4>Politik Luar Negeri Indonesia</h4>
+                        <p>Politik luar negeri Indonesia adalah <strong>bebas aktif</strong>: tidak terikat ideologi, tidak masuk blok negara mana pun, dan aktif ikut dalam kerja sama internasional. Indonesia menjunjung tinggi persahabatan dan saling menghormati.</p>
+
+                        <h4>Jenis Kerja Sama Antarnegara</h4>
+                        <ul>
+                            <li><strong>Bilateral:</strong> Kerja sama antara dua negara (Contoh: Indonesia - Malaysia).</li>
+                            <li><strong>Multilateral:</strong> Kerja sama yang melibatkan banyak negara (Contoh: PBB).</li>
+                            <li><strong>Regional:</strong> Kerja sama di satu kawasan (Contoh: ASEAN).</li>
+                            <li><strong>Internasional:</strong> Kerja sama antar negara di dunia (Contoh: PBB).</li>
+                        </ul>
+
+                        <h4>Peran Indonesia di ASEAN dan PBB</h4>
+                        <p>Indonesia turut mendirikan <strong>ASEAN</strong> (Association of Southeast Asian Nations) untuk meningkatkan pertumbuhan ekonomi, sosial, dan budaya di Asia Tenggara.</p>
+                        <p>Indonesia juga aktif dalam <strong>PBB</strong> (Perserikatan Bangsa-Bangsa) dan pernah mengirimkan misi perdamaian. Manfaatnya: mendapat dukungan HAM, bantuan pembangunan, dan ikut menjaga perdamaian dunia.</p>
+
+                        <h4>Permasalahan Global (SDGs)</h4>
+                        <p>Negara anggota PBB menyepakati 17 poin <strong>Tujuan Pembangunan Berkelanjutan (SDGs)</strong> untuk dicapai tahun 2030, seperti menghilangkan kemiskinan dan kelaparan.</p>
+                    </div>
+                </details>
+                
+                <!-- Topik C -->
+                <details>
+                    <summary>Topik C: Warisan Budaya Indonesia yang Mendunia</summary>
+                    <div>
+                        <h4>Kekayaan Budaya Indonesia</h4>
+                        <p>Indonesia memiliki lebih dari 1.340 suku bangsa. <strong>UNESCO</strong> (United Nations Educational, Scientific and Cultural Organization) adalah organisasi PBB yang mencatat warisan budaya dunia.</p>
+
+                        <h4>Jenis Budaya</h4>
+                        <ul>
+                            <li><strong>Budaya Benda:</strong> Peninggalan yang bisa dilihat dan disentuh (Contoh: Candi Borobudur, Prambanan, Taman Nasional Komodo, Ujung Kulon, Museum Fosil Sangiran, Taman Nasional Lorentz).</li>
+                            <li><strong>Budaya Tak Benda:</strong> Berupa praktik, ekspresi, keterampilan, atau pengetahuan.</li>
+                        </ul>
+
+                        <h4>Upaya Melestarikan Budaya</h4>
+                        <ul>
+                            <li>Mempelajari budaya daerah.</li>
+                            <li>Menggunakan produk budaya lokal.</li>
+                            <li>Mengikuti dan mengadakan kegiatan budaya.</li>
+                            <li>Mengenalkan budaya ke negara lain (misal: via media sosial).</li>
+                            <li>Menghargai dan bangga terhadap budaya sendiri.</li>
+                            <li>Mengajarkan budaya kepada generasi muda.</li>
+                        </ul>
+                        
+                        <h4>Pentingnya Pelestarian Budaya</h4>
+                        <p>Budaya perlu diwariskan untuk menjaga identitas bangsa, menghindari kepunahan budaya, dan menjadi daya tarik wisata serta kekayaan negara.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- 3. Halaman Login Kuis -->
+        <div id="kuis-login-page" class="page-container hidden p-6 sm:p-10">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Mulai Kuis</h2>
+                <button onclick="showPage('menu-utama')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg transition duration-200">
+                    &larr; Batal
+                </button>
+            </div>
+            <p class="text-gray-600 mb-6">Silakan isi data diri Anda sebelum memulai kuis. Kuis terdiri dari 25 soal. Setiap jawaban benar bernilai 4 poin.</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label for="nama-siswa" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                    <input type="text" id="nama-siswa" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="kelas-siswa" class="block text-sm font-medium text-gray-700 mb-1">Kelas</label>
+                    <select id="kelas-siswa" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Pilih Kelas</option>
+                        <option value="6A">6A</option>
+                        <option value="6B">6B</option>
+                        <option value="6C">6C</option>
+                        <option value="6D">6D</option>
+                        <option value="6E">6E</option>
+                    </select>
+                </div>
+                <div id="login-error" class="text-red-600 text-sm hidden">Nama dan Kelas wajib diisi!</div>
+                <button onclick="startQuiz()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 text-lg">
+                    Mulai Kerjakan
+                </button>
+            </div>
+        </div>
+
+        <!-- 4. Halaman Kuis -->
+        <div id="kuis-page" class="page-container hidden p-6 sm:p-10">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-gray-800">Kuis IPAS Bab 4</h2>
+                <div class="text-lg font-semibold text-gray-600">
+                    Soal <span id="question-number">1</span>/25
+                </div>
+            </div>
+            
+            <!-- Tempat Soal -->
+            <p id="question-text" class="text-lg text-gray-700 mb-6 min-h-[60px]"></p>
+            
+            <!-- Tempat Pilihan Jawaban -->
+            <div id="options-container" class="space-y-3">
+                <!-- Pilihan jawaban akan dimasukkan oleh JavaScript -->
+            </div>
+            
+            <!-- Tombol Navigasi -->
+            <div class="mt-8 text-right">
+                <button id="next-btn" onclick="nextQuestion()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-200 hidden">
+                    Selanjutnya &rarr;
+                </button>
+                <button id="finish-btn" onclick="showResults()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-200 hidden">
+                    Selesai
+                </button>
+            </div>
+        </div>
+
+        <!-- 5. Halaman Hasil Kuis -->
+        <div id="hasil-page" class="page-container hidden p-6 sm:p-10 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Hasil Kuis</h2>
+            
+            <div class="bg-gray-100 p-6 rounded-lg shadow-inner mb-6">
+                <p class="text-lg text-gray-700">
+                    <span id="hasil-nama" class="font-bold"></span> - Kelas <span id="hasil-kelas" class="font-bold"></span>
+                </p>
+                <p class="text-6xl font-bold text-blue-600 my-4" id="hasil-skor"></p>
+                <p class="text-xl text-gray-600">
+                    Jawaban Benar: <span id="hasil-benar" class="font-bold"></span> dari 25 soal
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="restartQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200">
+                    Ulangi Kuis
+                </button>
+                <button onclick="showPage('menu-utama')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200">
+                    Kembali ke Menu
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- DATA KUIS ---
+        const quizData = [
+            {
+                question: "Kegiatan jual beli barang dan jasa yang dilakukan oleh satu negara dengan negara lain disebut...",
+                options: ["Perdagangan regional", "Perdagangan internasional", "Perdagangan bilateral", "Perdagangan lokal"],
+                answer: "Perdagangan internasional"
+            },
+            {
+                question: "Salah satu manfaat utama dari perdagangan antarnegara bagi Indonesia adalah...",
+                options: ["Mengurangi jumlah penduduk", "Menambah penghasilan negara (devisa)", "Menutup industri dalam negeri", "Mengurangi persahabatan antarnegara"],
+                answer: "Menambah penghasilan negara (devisa)"
+            },
+            {
+                question: "Berikut ini yang BUKAN merupakan tujuan perdagangan antarnegara adalah...",
+                options: ["Memenuhi kebutuhan dalam negeri", "Menjual kelebihan hasil produksi", "Meningkatkan persaingan tidak sehat", "Menjalin kerja sama antarnegara"],
+                answer: "Meningkatkan persaingan tidak sehat"
+            },
+            {
+                question: "Keuntungan utama dari kegiatan ekspor bagi suatu negara adalah...",
+                options: ["Mendapatkan devisa", "Menghabiskan devisa", "Mendapatkan produk yang lebih murah", "Meningkatkan ketergantungan pada negara lain"],
+                answer: "Mendapatkan devisa"
+            },
+            {
+                question: "Jika suatu negara terlalu banyak melakukan impor, dampak negatif yang dapat terjadi adalah...",
+                options: ["Industri lokal semakin kuat", "Devisa negara berkurang", "Lapangan kerja bertambah", "Rasa cinta tanah air meningkat"],
+                answer: "Devisa negara berkurang"
+            },
+            {
+                question: "Tindakan menggunakan produk buatan anak bangsa dapat...",
+                options: ["Mengurangi ketergantungan pada produk impor", "Melemahkan industri lokal", "Mengurangi devisa negara", "Membuat ekonomi negara bergantung pada luar negeri"],
+                answer: "Mengurangi ketergantungan pada produk impor"
+            },
+            {
+                question: "Faktor yang mempercepat penyebaran informasi ke seluruh dunia dalam era globalisasi adalah...",
+                options: ["Kemajuan teknologi transportasi", "Kemajuan teknologi informasi dan komunikasi (internet)", "Perkembangan sistem ekonomi tradisional", "Migrasi penduduk desa ke kota"],
+                answer: "Kemajuan teknologi informasi dan komunikasi (internet)"
+            },
+            {
+                question: "Perusahaan yang beroperasi di banyak negara dan menyebarkan produk serta budaya global disebut...",
+                options: ["Perusahaan multinasional", "Perusahaan regional", "Perusahaan bilateral", "Perusahaan lokal"],
+                answer: "Perusahaan multinasional"
+            },
+            {
+                question: "Mudahnya produk dari satu negara dijual di negara lain dan terintegrasinya ekonomi antarnegara adalah contoh globalisasi di bidang...",
+                options: ["Politik", "Budaya", "IPTEK", "Ekonomi"],
+                answer: "Ekonomi"
+            },
+            {
+                question: "Menyebarnya tren fashion Korea (K-fashion) ke berbagai negara adalah contoh globalisasi di bidang...",
+                options: ["Budaya", "Politik", "Ekonomi", "IPTEK"],
+                answer: "Budaya"
+            },
+            {
+                question: "Meningkatnya hubungan diplomatik dan kerja sama antarnegara untuk perdamaian dunia merupakan dampak globalisasi di bidang...",
+                options: ["IPTEK", "Budaya", "Politik", "Ekonomi"],
+                answer: "Politik"
+            },
+            {
+                question: "Cepatnya penyebaran hasil riset dan temuan teknologi antarnegara sehingga inovasi berkembang pesat adalah dampak globalisasi di bidang...",
+                options: ["Budaya", "Politik", "IPTEK", "Ekonomi"],
+                answer: "IPTEK"
+            },
+            {
+                question: "Sikap politik luar negeri Indonesia yang tidak terikat oleh suatu ideologi dan tidak masuk blok negara mana pun, namun aktif dalam kerja sama internasional disebut...",
+                options: ["Bebas pasif", "Bebas aktif", "Politik terikat", "Politik isolasi"],
+                answer: "Bebas aktif"
+            },
+            {
+                question: "Organisasi negara-negara di kawasan Asia Tenggara yang turut didirikan oleh Indonesia adalah...",
+                options: ["PBB", "UNESCO", "ASEAN", "SDGs"],
+                answer: "ASEAN"
+            },
+            {
+                question: "Kepanjangan dari ASEAN adalah...",
+                options: ["Association of Southeast Asian Nations", "Assembly of Southeast Asian Nations", "Association of South Asian Nations", "Assembly of South and East Asian Nations"],
+                answer: "Association of Southeast Asian Nations"
+            },
+            {
+                question: "Berikut ini yang merupakan manfaat Indonesia sebagai anggota ASEAN adalah...",
+                options: ["Mendapat bantuan pembangunan dari badan-badan PBB", "Ikut menjaga perdamaian dunia di luar Asia Tenggara", "Menjaga keamanan dan stabilitas kawasan (Asia Tenggara)", "Mendapat dukungan perlindungan HAM global"],
+                answer: "Menjaga keamanan dan stabilitas kawasan (Asia Tenggara)"
+            },
+            {
+                question: "Berikut ini yang merupakan manfaat Indonesia sebagai anggota PBB adalah...",
+                options: ["Menarik investasi khusus di Asia Tenggara", "Ikut serta menjaga perdamaian dunia", "Mempermudah mobilitas warga di Asia Tenggara", "Bekerja sama dalam penanganan bencana di kawasan ASEAN"],
+                answer: "Ikut serta menjaga perdamaian dunia"
+            },
+            {
+                question: "Permasalahan yang berlangsung di hampir seluruh dunia, seperti perubahan iklim dan polusi, disebut...",
+                options: ["Permasalahan regional", "Permasalahan bilateral", "Permasalahan global", "Permasalahan nasional"],
+                answer: "Permasalahan global"
+            },
+            {
+                question: "17 poin tujuan bersama negara-negara anggota PBB yang disepakati tahun 2015 untuk dicapai tahun 2030 disebut...",
+                options: ["ASEAN Goals", "UNESCO Heritage", "Sustainable Development Goals (SDGs)", "Politik Bebas Aktif"],
+                answer: "Sustainable Development Goals (SDGs)"
+            },
+            {
+                question: "Kerja sama yang dilakukan antara dua negara saja, misalnya Indonesia dan Malaysia, disebut kerja sama...",
+                options: ["Multilateral", "Regional", "Internasional", "Bilateral"],
+                answer: "Bilateral"
+            },
+            {
+                question: "Keanggotaan Indonesia dalam organisasi PBB merupakan contoh dari kerja sama...",
+                options: ["Bilateral", "Multilateral", "Regional terbatas", "Lokal"],
+                answer: "Multilateral"
+            },
+            {
+                question: "Organisasi PBB yang bergerak di bidang pelestarian budaya dan mencatat warisan budaya dunia adalah...",
+                options: ["SDGs", "ASEAN", "UNESCO", "PBB"],
+                answer: "UNESCO"
+            },
+            {
+                question: "Peninggalan budaya yang bisa kita lihat dengan mata dan disentuh dengan tangan, seperti candi, disebut...",
+                options: ["Budaya Tak Benda", "Budaya Benda", "Budaya Global", "Budaya Populer"],
+                answer: "Budaya Benda"
+            },
+            {
+                question: "Candi Borobudur, Candi Prambanan, dan Taman Nasional Komodo adalah contoh warisan budaya Indonesia yang diakui UNESCO sebagai...",
+                options: ["Budaya Benda", "Budaya Tak Benda", "Budaya Politik", "Budaya Ekonomi"],
+                answer: "Budaya Benda"
+            },
+            {
+                question: "Salah satu alasan pentingnya melestarikan budaya adalah untuk...",
+                options: ["Menghindari kemajuan teknologi", "Mengurangi jumlah wisatawan", "Menjaga identitas bangsa", "Mengurangi kerja sama internasional"],
+                answer: "Menjaga identitas bangsa"
+            }
+        ];
+
+        // --- VARIABEL GLOBAL ---
+        let currentQuestionIndex = 0;
+        let skor = 0;
+        let namaSiswa = "";
+        let kelasSiswa = "";
+
+        // --- ELEMEN DOM ---
+        const pages = document.querySelectorAll('.page-container');
+        const loginError = document.getElementById('login-error');
+        const namaInput = document.getElementById('nama-siswa');
+        const kelasInput = document.getElementById('kelas-siswa');
+        
+        const questionNumberEl = document.getElementById('question-number');
+        const questionTextEl = document.getElementById('question-text');
+        const optionsContainerEl = document.getElementById('options-container');
+        const nextBtn = document.getElementById('next-btn');
+        const finishBtn = document.getElementById('finish-btn');
+        
+        const hasilNamaEl = document.getElementById('hasil-nama');
+        const hasilKelasEl = document.getElementById('hasil-kelas');
+        const hasilSkorEl = document.getElementById('hasil-skor');
+        const hasilBenarEl = document.getElementById('hasil-benar');
+
+        // --- FUNGSI NAVIGASI ---
+        function showPage(pageId) {
+            pages.forEach(page => {
+                if (page.id === pageId) {
+                    page.classList.remove('hidden');
+                } else {
+                    page.classList.add('hidden');
+                }
+            });
+        }
+
+        // --- FUNGSI KUIS ---
+        function startQuiz() {
+            namaSiswa = namaInput.value.trim();
+            kelasSiswa = kelasInput.value;
+
+            // Validasi input
+            if (namaSiswa === "" || kelasSiswa === "") {
+                loginError.classList.remove('hidden');
+                return;
+            }
+            
+            loginError.classList.add('hidden');
+            
+            // Reset kuis
+            currentQuestionIndex = 0;
+            skor = 0;
+            
+            loadQuestion();
+            showPage('kuis-page');
+        }
+
+        function loadQuestion() {
+            // Sembunyikan tombol navigasi
+            nextBtn.classList.add('hidden');
+            finishBtn.classList.add('hidden');
+
+            // Ambil data soal
+            const currentQuestion = quizData[currentQuestionIndex];
+            
+            // Tampilkan nomor soal dan teks soal
+            questionNumberEl.textContent = currentQuestionIndex + 1;
+            questionTextEl.textContent = currentQuestion.question;
+            
+            // Bersihkan pilihan sebelumnya
+            optionsContainerEl.innerHTML = '';
+            
+            // Buat tombol pilihan jawaban
+            currentQuestion.options.forEach(option => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.className = "w-full text-left p-4 bg-gray-100 rounded-lg border border-gray-200 hover:bg-gray-200 hover:border-gray-300 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400";
+                button.onclick = () => selectAnswer(option, button);
+                optionsContainerEl.appendChild(button);
+            });
+        }
+
+        function selectAnswer(selectedOption, buttonElement) {
+            // Nonaktifkan semua tombol pilihan
+            const optionButtons = optionsContainerEl.querySelectorAll('button');
+            optionButtons.forEach(btn => {
+                btn.disabled = true;
+                // Hapus hover state
+                btn.classList.remove('hover:bg-gray-200'); 
+            });
+
+            const correctAnswer = quizData[currentQuestionIndex].answer;
+
+            if (selectedOption === correctAnswer) {
+                // Jawaban benar
+                skor += 4;
+                buttonElement.classList.add('bg-green-500', 'text-white', 'border-green-600');
+                buttonElement.classList.remove('bg-gray-100');
+            } else {
+                // Jawaban salah
+                buttonElement.classList.add('bg-red-500', 'text-white', 'border-red-600');
+                buttonElement.classList.remove('bg-gray-100');
+                
+                // Tunjukkan jawaban yang benar
+                optionButtons.forEach(btn => {
+                    if (btn.textContent === correctAnswer) {
+                        btn.classList.add('bg-green-500', 'text-white', 'border-green-600');
+                        btn.classList.remove('bg-gray-100');
+                    }
+                });
+            }
+
+            // Tampilkan tombol navigasi yang sesuai
+            if (currentQuestionIndex < quizData.length - 1) {
+                nextBtn.classList.remove('hidden');
+            } else {
+                finishBtn.classList.remove('hidden');
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            loadQuestion();
+        }
+
+        function showResults() {
+            hasilNamaEl.textContent = namaSiswa;
+            hasilKelasEl.textContent = kelasSiswa;
+            hasilSkorEl.textContent = skor;
+            hasilBenarEl.textContent = skor / 4;
+            
+            showPage('hasil-page');
+        }
+
+        function restartQuiz() {
+            // Reset form
+            namaInput.value = '';
+            kelasInput.value = '';
+            showPage('kuis-login-page');
+        }
+
+        // --- INISIALISASI ---
+        // Tampilkan menu utama saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('menu-utama');
+        });
+
+    </script>
+</body>
+</html>
